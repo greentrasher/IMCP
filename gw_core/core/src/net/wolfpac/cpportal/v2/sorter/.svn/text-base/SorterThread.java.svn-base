@@ -1,0 +1,105 @@
+package net.wolfpac.cpportal.v2.sorter;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Properties;
+
+
+import net.wolfpac.cpportal.v2.clients.IncomingFileFormat;
+import net.wolfpac.cpportal.v2.clients.ClientType.TYPE;
+import net.wolfpac.cpportal.v2.db.DBConnector;
+import net.wolfpac.cpportal.v2.db.RequesterReporterDir;
+import net.wolfpac.logger.BasicLoggerPool;
+import net.wolfpac.logger.LogLevel;
+
+public abstract class SorterThread implements Runnable{
+	private static BasicLoggerPool loggerPool = BasicLoggerPool.getLogger(System.getProperty("confFile"));
+	
+	protected DBConnector dao;
+	protected File directory, default_directory;	
+	protected int ac_id;
+	private TYPE type;
+	
+	private String stmp;
+	private String stmp1;
+	
+	public abstract void processLine(String line, File file) throws SQLException, IOException;
+	
+	
+	public SorterThread(Properties prop, File directory, File default_dir, int ac_id, TYPE type) throws Exception {		
+		this.ac_id = ac_id;
+		this.directory = directory;
+		this.default_directory = default_dir;
+		this.type = type;
+		
+		loggerPool.logMeHum(this.ac_id + " processing: " + directory + " ac_id: " + ac_id + " default: " + default_dir + " type: " + this.type);
+		dao = new DBConnector(prop.getProperty("DB_URL"), prop.getProperty("DB_USER"), prop.getProperty("DB_PASS"));
+	}
+	
+	@Override
+	public void run() {
+		
+		while(true) {
+			try {
+				Thread.sleep(2000);
+				
+				File[] files = this.directory.listFiles();
+				for(File file : files) {
+					if (file.getName().startsWith(".".intern())) {
+						continue;					
+					}
+					processFile(file);
+					file.delete();
+				}
+				
+			}
+			catch(SQLException e) {
+				loggerPool.logMeError(e.getMessage());
+			}
+			catch(IOException e) {
+				loggerPool.logMeError(e.getMessage());
+			}
+			catch(InterruptedException e) {
+				loggerPool.logMeError(e.getMessage());
+				break;
+			}
+		
+		}
+		
+		
+	}
+	
+	public void processFile(File file) throws SQLException, IOException {
+		if (stmp == null) {
+			stmp = this.ac_id + " Processing: ";
+		}
+		
+		loggerPool.logMeHum(stmp.intern() +  file);
+		BufferedReader br = null;
+		
+		
+			br = new BufferedReader(new FileReader(file));
+			
+			String line;
+			while((line = br.readLine()) != null) {
+				if (stmp1 == null ) {
+					stmp1 = this.ac_id + " ";
+				}
+				loggerPool.logMeHum(stmp1.intern() + line);
+				processLine(line, file);
+			}
+		
+		
+			if (br != null) {
+				try {
+					br.close();
+				}
+				catch(Exception e) {							}
+			}
+	}
+	
+}

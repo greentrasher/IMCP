@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/spring-samples/!svn/ver/492/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments
+END
+AppointmentCalendarMessageQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentCalendarMessageQueue.java
+END
+AppointmentMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentMessage.java
+END
+AppointmentCalendar_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/spring-samples/!svn/ver/403/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentCalendar_Roo_JavaBean.aj
+END
+NewAppointment.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/spring-samples/!svn/ver/354/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/NewAppointment.java
+END
+AppointmentCalendar_Roo_ToString.aj
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/spring-samples/!svn/ver/399/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentCalendar_Roo_ToString.aj
+END
+Appointment_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/spring-samples/!svn/ver/408/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/Appointment_Roo_JavaBean.aj
+END
+Appointment_Roo_ToString.aj
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/spring-samples/!svn/ver/408/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/Appointment_Roo_ToString.aj
+END
+AppointmentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/spring-samples/!svn/ver/348/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentService.java
+END
+AppointmentMessage_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentMessage_Roo_JavaBean.aj
+END
+AppointmentMessage_Roo_ToString.aj
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentMessage_Roo_ToString.aj
+END
+AppointmentsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/spring-samples/!svn/ver/474/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentsController.java
+END
+NewAppointment_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/spring-samples/!svn/ver/399/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/NewAppointment_Roo_JavaBean.aj
+END
+AppointmentCalendar.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/spring-samples/!svn/ver/442/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/AppointmentCalendar.java
+END
+NewAppointment_Roo_ToString.aj
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/spring-samples/!svn/ver/399/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/NewAppointment_Roo_ToString.aj
+END
+Appointment.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/spring-samples/!svn/ver/408/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/Appointment.java
+END

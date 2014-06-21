@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/spring-samples/!svn/ver/479/petcare/trunk/src/main/resources/META-INF/spring/appServlet
+END
+controllers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/spring-samples/!svn/ver/476/petcare/trunk/src/main/resources/META-INF/spring/appServlet/controllers.xml
+END
+servlet-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/spring-samples/!svn/ver/479/petcare/trunk/src/main/resources/META-INF/spring/appServlet/servlet-context.xml
+END

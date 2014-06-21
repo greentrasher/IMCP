@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/spring-samples/!svn/ver/453/petcare/trunk/src/main/java/org/springframework/samples/petcare/util
+END
+Address_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/spring-samples/!svn/ver/399/petcare/trunk/src/main/java/org/springframework/samples/petcare/util/Address_Roo_JavaBean.aj
+END
+Address.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/spring-samples/!svn/ver/394/petcare/trunk/src/main/java/org/springframework/samples/petcare/util/Address.java
+END
+EntityReference_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/spring-samples/!svn/ver/402/petcare/trunk/src/main/java/org/springframework/samples/petcare/util/EntityReference_Roo_JavaBean.aj
+END
+EntityReference.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/spring-samples/!svn/ver/402/petcare/trunk/src/main/java/org/springframework/samples/petcare/util/EntityReference.java
+END
+EntityReference_Roo_ToString.aj
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/spring-samples/!svn/ver/402/petcare/trunk/src/main/java/org/springframework/samples/petcare/util/EntityReference_Roo_ToString.aj
+END

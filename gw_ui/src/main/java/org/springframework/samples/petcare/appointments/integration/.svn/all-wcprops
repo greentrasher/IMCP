@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/spring-samples/!svn/ver/424/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/integration
+END
+DefaultAppointmentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/spring-samples/!svn/ver/421/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/integration/DefaultAppointmentService.java
+END
+AppointmentMessageGateway.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/integration/AppointmentMessageGateway.java
+END
+DefaultAppointmentCalendarMessageQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/appointments/integration/DefaultAppointmentCalendarMessageQueue.java
+END

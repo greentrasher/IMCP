@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/spring-samples/!svn/ver/473/petcare/trunk/src/main/webapp/WEB-INF/views/appointments
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/spring-samples/!svn/ver/379/petcare/trunk/src/main/webapp/WEB-INF/views/appointments/tiles.xml
+END
+calendar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/spring-samples/!svn/ver/473/petcare/trunk/src/main/webapp/WEB-INF/views/appointments/calendar.jsp
+END

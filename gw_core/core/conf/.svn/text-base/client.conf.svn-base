@@ -1,0 +1,23 @@
+DB_DRIVER = com.mysql.jdbc.Driver
+;DB_URL    = jdbc:mysql://192.168.201.31/woof_cpportal_new_db
+DB_URL    = jdbc:mysql://192.168.201.146/woof_cpportal_new_db
+DB_USER   = minato
+DB_PASS   = yellowflash
+
+
+DB_USER_RESET   = samantha
+DB_PASS_RESET   = garapats
+
+
+
+LOG_DIR = /home/wammp/log/cpv2/
+LOG_SUFFIX = cpv2_clients
+LOG_POOL_SIZE = 3
+
+
+
+MaxTotalConnections = 50
+#in seconds
+ConnectionTimeout = 240
+#in millisecs
+SoTimeout = 60000

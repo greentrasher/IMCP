@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/spring-samples/!svn/ver/490/petcare/trunk/src/test/resources
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/spring-samples/!svn/ver/425/petcare/trunk/src/test/resources/application.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/spring-samples/!svn/ver/476/petcare/trunk/src/test/resources/log4j.xml
+END

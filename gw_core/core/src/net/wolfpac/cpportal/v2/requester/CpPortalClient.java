@@ -1,0 +1,139 @@
+package net.wolfpac.cpportal.v2.requester;
+import java.io.FileInputStream;
+import java.rmi.Naming;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+
+import net.wolfpac.cpportal.v2.clients.ClientInterface;
+import net.wolfpac.cpportal.v2.clients.ClientThread;
+import net.wolfpac.cpportal.v2.clients.ClientType;
+import net.wolfpac.cpportal.v2.clients.ClientType.TYPE;
+import net.wolfpac.cpportal.v2.db.CPInfo;
+import net.wolfpac.cpportal.v2.reporter.ReporterThread;
+import net.wolfpac.logger.BasicLoggerPool;
+
+
+/**
+ * This example demonstrates the use of the {@link ResponseHandler} to simplify 
+ * the process of processing the HTTP response and releasing associated resources.
+ */
+public class CpPortalClient extends ClientType implements ClientInterface{
+	
+	private static BasicLoggerPool loggerPool = BasicLoggerPool.getLogger(System.getProperty("confFile"));
+	Hashtable<String, Future<?>> pool = new Hashtable<String, Future<?>>();
+	ExecutorService es = Executors.newFixedThreadPool(50);
+	
+	public CpPortalClient(Properties prop) throws Exception {
+		super(prop);
+	}
+	
+	
+	@Override
+	public synchronized void spawn(int cp_id, String directory, TYPE type)
+			throws Exception {
+		
+			
+			loggerPool.logMeHum("spawn -> " + cp_id +":"+directory + ":" + type);
+			
+			CPInfo req = null; 
+			synchronized (dbh) {
+				req = dbh.getCPInfo(type, cp_id);	
+			}
+			
+			
+			ClientThread rt = null;
+			
+			
+			String key = directory + "-" + cp_id + "-" + type;
+			
+			loggerPool.logMeHum("key <- "+ key);
+			
+			if (pool.get(key) != null) {
+				System.out.println("already running!");
+				return;
+			}
+			
+			
+			Future<?> future;
+			if (type == TYPE.REQUESTER) {
+				rt = new RequesterThread(req, this.prop, this.httpclient);
+			
+			}
+			else if (type == TYPE.REPORTER){
+				rt = new ReporterThread(req, this.prop, this.httpclient);
+				
+			}
+			
+			try {
+				future = es.submit(rt);
+				pool.put(key, future);
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+	}
+	
+	@Override
+	public synchronized void stop(int ac_id, String directory, TYPE type) throws Exception {
+		
+		CPInfo req = null; 
+		synchronized (dbh) {
+			req = dbh.getCPInfo(type, ac_id);	
+		}
+		
+		String key = directory + "-" + ac_id + "-" + type;
+		
+		Future<?> future = pool.get(key); 
+		if (future  == null) {
+			System.out.println("not running!");
+			return;
+		}
+		
+		boolean cancelled = future.cancel(true);
+		if (cancelled ) {
+			pool.remove(key);
+		}		
+		
+	}
+	
+	public void rmiBind() throws Exception {
+		Naming.rebind("cpportal_client", this);
+	}
+	
+	public void runSpawner() throws Exception {
+		
+		for ( CPInfo ci : dbh.getCPInfos(TYPE.REQUESTER) ) {
+			spawn(ci.getCp_id(), ci.getRequester_dir(), TYPE.REQUESTER);			
+		}
+		
+		for ( CPInfo ci : dbh.getCPInfos(TYPE.REPORTER) ) {
+			spawn(ci.getCp_id(), ci.getReporter_dir(), TYPE.REPORTER);
+		}
+		
+	}
+	
+	
+    public static void main(String[] args) throws Exception  {
+    	try {
+    		loggerPool.logMeError("App started!");
+	    	Properties prop = new Properties();    	
+	    	prop.load(new FileInputStream(args[0]));
+	    	CpPortalClient client = new CpPortalClient(prop);
+	    	
+	    	client.rmiBind();	    	
+	    	client.runSpawner();
+	    	
+		}
+    	catch(Exception e)	{
+    		loggerPool.logMeError(e.toString());
+    		e.printStackTrace();
+    	}
+    	 
+    }
+    
+}

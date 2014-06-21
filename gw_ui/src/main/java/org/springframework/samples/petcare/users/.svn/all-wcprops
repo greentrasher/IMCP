@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/spring-samples/!svn/ver/412/petcare/trunk/src/main/java/org/springframework/samples/petcare/users
+END
+PetcareUserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/spring-samples/!svn/ver/406/petcare/trunk/src/main/java/org/springframework/samples/petcare/users/PetcareUserService.java
+END
+PetcareAuthenticationFailureHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/spring-samples/!svn/ver/412/petcare/trunk/src/main/java/org/springframework/samples/petcare/users/PetcareAuthenticationFailureHandler.java
+END

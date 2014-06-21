@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="HibernateJPA" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>icmp.view.Sms</class>
+    <class>icmp.view.Customer</class>
+    <properties>
+      <property name="hibernate.connection.username" value="app"/>
+      <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="hibernate.connection.password" value="app"/>
+      <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="com.embensyon.icmp-app_icmp-app_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>

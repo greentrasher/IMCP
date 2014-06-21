@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 16, 2009 7:06:01 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="icmp.entity.SMS" table="sms" catalog="icmp">
+        <id name="smsId" type="java.lang.Short">
+            <column name="sms_id" />
+            <generator class="identity" />
+        </id>
+        <property name="toNumber" type="string">
+            <column name="to_number" length="45" not-null="true" />
+        </property>
+        <property name="fromNumber" type="string">
+            <column name="from_number" length="45" not-null="true" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" length="45" not-null="true" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="45" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" length="1" not-null="true" default="0"/>
+        </property>
+        <property name="dateCreated" type="java.util.Date">
+            <column name="date_created" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="timestamp">
+            <column name="date_updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

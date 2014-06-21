@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/clients
+END
+ClientsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/spring-samples/!svn/ver/394/petcare/trunk/src/main/java/org/springframework/samples/petcare/clients/ClientsController.java
+END
+PatientsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/main/java/org/springframework/samples/petcare/clients/PatientsController.java
+END
+Client_Roo_JavaBean.aj
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/spring-samples/!svn/ver/399/petcare/trunk/src/main/java/org/springframework/samples/petcare/clients/Client_Roo_JavaBean.aj
+END
+Client.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/spring-samples/!svn/ver/394/petcare/trunk/src/main/java/org/springframework/samples/petcare/clients/Client.java
+END

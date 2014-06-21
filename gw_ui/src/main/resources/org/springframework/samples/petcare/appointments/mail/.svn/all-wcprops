@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/spring-samples/!svn/ver/492/petcare/trunk/src/main/resources/org/springframework/samples/petcare/appointments/mail
+END
+new-appointment-mail.st
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/spring-samples/!svn/ver/492/petcare/trunk/src/main/resources/org/springframework/samples/petcare/appointments/mail/new-appointment-mail.st
+END
+cancelled-appointment-mail.st
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/spring-samples/!svn/ver/492/petcare/trunk/src/main/resources/org/springframework/samples/petcare/appointments/mail/cancelled-appointment-mail.st
+END

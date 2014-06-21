@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/test/java/org/springframework/samples/petcare/appointments
+END
+JdbcAppointmentServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/spring-samples/!svn/ver/417/petcare/trunk/src/test/java/org/springframework/samples/petcare/appointments/JdbcAppointmentServiceTest.java
+END
+AppointmentCalendarTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/spring-samples/!svn/ver/403/petcare/trunk/src/test/java/org/springframework/samples/petcare/appointments/AppointmentCalendarTest.java
+END

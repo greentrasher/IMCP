@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/spring-samples/!svn/ver/479/petcare/trunk/src/main/resources/META-INF/spring
+END
+integration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/spring-samples/!svn/ver/425/petcare/trunk/src/main/resources/META-INF/spring/integration.xml
+END
+root-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/spring-samples/!svn/ver/455/petcare/trunk/src/main/resources/META-INF/spring/root-context.xml
+END
+security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/spring-samples/!svn/ver/425/petcare/trunk/src/main/resources/META-INF/spring/security.xml
+END

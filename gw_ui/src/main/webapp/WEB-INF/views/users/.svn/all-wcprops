@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/spring-samples/!svn/ver/389/petcare/trunk/src/main/webapp/WEB-INF/views/users
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/spring-samples/!svn/ver/382/petcare/trunk/src/main/webapp/WEB-INF/views/users/tiles.xml
+END
+signin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/spring-samples/!svn/ver/389/petcare/trunk/src/main/webapp/WEB-INF/views/users/signin.jsp
+END

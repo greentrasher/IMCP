@@ -1,0 +1,65 @@
+package net.wolfpac.cpportal.v2.clients;
+
+public abstract class FileFormat {
+	protected String des_msisdn, msg ;
+	
+	protected String line;
+	protected boolean validLine ;
+	protected String problem;
+	protected int vaeSID ;
+	protected String vaeRRN;
+	
+	protected boolean vae = false;
+	
+	public abstract void reset(String line);
+	
+	
+	public String getProblem() {
+		return problem;
+	}
+	
+	public boolean isValidLine() {
+		return validLine;
+	}
+	
+
+	public String getDes_msisdn() {
+		return des_msisdn;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+	
+	public String getLine() {
+		return line;
+	}
+	
+	public FileFormat(String line) {
+		this.line  = line;
+		validLine = true;
+		parseFile();
+	
+	}
+	
+	public abstract void parseFile();
+
+
+	public int getVaeSID() {
+		return vaeSID;
+	}
+
+
+	public String getVaeRRN() {
+		return vaeRRN;
+	}
+
+
+	public boolean isVae() {
+		return vae;
+	}
+	
+
+	
+	
+}

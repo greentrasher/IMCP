@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/spring-samples/!svn/ver/490/petcare/trunk/src/test/resources/org/springframework/samples/petcare/util/resource/resources/js
+END
+bar.js
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/spring-samples/!svn/ver/490/petcare/trunk/src/test/resources/org/springframework/samples/petcare/util/resource/resources/js/bar.js
+END
+foo.js
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/spring-samples/!svn/ver/490/petcare/trunk/src/test/resources/org/springframework/samples/petcare/util/resource/resources/js/foo.js
+END

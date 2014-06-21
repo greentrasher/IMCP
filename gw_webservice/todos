@@ -1,0 +1,27 @@
+API
+- send sms
+- get status
+- get sms messages 
+- authenticate/token
+
+process:
+(get_token)
+- client request token using API key
+- server validates API key, 
+  if !ok response -1, 
+  else 
+	server generate and save unique token
+	server response token
+  to be use on cuncurrent request.
+
+(send_sms)
+- client send sms with token.
+- server process request, dump file to incoming folder.
+
+(get_sms_status)
+- 
+
+(get_sms_msgs)
+- client receives new messages  
+
+
